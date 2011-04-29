@@ -10,7 +10,7 @@ class App < Sinatra::Base
     "Provide a user/repo combination, dummy."
   end
 
-  get '/:user/:repo', provides: ['rss', 'atom', 'xml'] do
+  get '/:user/:repo' do
     @repo = "#{params[:user]}/#{params[:repo]}"
     @issues = JSON.parse(Curl::Easy.perform("https://api.github.com/repos/#{@repo}/issues").body_str)
     builder :index
