@@ -9,7 +9,7 @@ xml.rss :version => "2.0" do
       xml.item do
         xml.title       "#{issue['number']}: #{issue['title']}"
         xml.description issue['body']
-        xml.pubDate     issue['created_at']
+        xml.pubDate     DateTime.parse(issue['created_at']).rfc822
         xml.link        issue['html_url']
       end
     end
