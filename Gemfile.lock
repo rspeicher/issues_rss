@@ -1,5 +1,7 @@
 GEM
+  remote: http://rubygems.org/
   specs:
+    builder (3.0.0)
     curb (0.7.8)
     rack (1.2.2)
     sinatra (1.2.1)
@@ -11,5 +13,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  builder
   curb
   sinatra

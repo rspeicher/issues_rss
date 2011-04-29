@@ -1,2 +1,5 @@
-gem 'sinatra'
+source :rubygems
+
+gem 'builder'
 gem 'curb'
+gem 'sinatra'
