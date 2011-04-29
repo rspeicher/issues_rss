@@ -7,7 +7,7 @@ xml.rss :version => "2.0" do
 
     for issue in @issues
       xml.item do
-        xml.title       issue['title']
+        xml.title       "#{issue['number']}: #{issue['title']}"
         xml.description issue['body']
         xml.pubDate     issue['created_at']
         xml.link        issue['html_url']
